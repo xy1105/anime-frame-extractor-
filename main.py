@@ -129,7 +129,7 @@ class SettingsDialog(QDialog):
         layout.addWidget(self.blur_size_edit)
         
         self.reverse_video_check = QCheckBox("默认倒放视频")
-        self.reverse_video_check.setChecked(settings.get("reverse_video"))
+        self.reverse_video_check.setChecked(False)
         layout.addWidget(self.reverse_video_check)
         
         button_layout = QHBoxLayout()
