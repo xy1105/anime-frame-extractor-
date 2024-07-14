@@ -84,7 +84,7 @@ class Settings:
             "threshold": 15,
             "min_area": 500,
             "blur_size": 5,
-            "reverse_video": True
+            "reverse_video": False
         }
         self.load()
 
@@ -424,7 +424,7 @@ class App(QWidget):
         self.create_ae_style_slider(param_layout, '模糊程度：', 0, 30, self.settings.get("blur_size"), 2, self.get_blur_help)
 
         self.reverse_video = QCheckBox('倒放视频')
-        self.reverse_video.setChecked(self.settings.get("reverse_video"))
+        self.reverse_video.setChecked(False)
         param_layout.addWidget(self.reverse_video, 3, 0, 1, 4)
 
         param_group.setLayout(param_layout)
